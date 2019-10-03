@@ -26,7 +26,11 @@ namespace Builder.Models
 
         public override string ToString()
         {
-            return $"Pizza {Nombre} / Pan: {Pan}, Carne: {Carne}, Relleno: {string.Join("+", Relleno)}";
+            return $"Hamburguesa {Nombre} " + Environment.NewLine +
+                $"\t Pan: {Pan} " + Environment.NewLine +
+                $"\t Carne: {Carne}" + Environment.NewLine +
+                $"\t Relleno:" + Environment.NewLine + $"\t\t{string.Join(Environment.NewLine + "\t\t", Relleno)}" +
+                Environment.NewLine + $"\t Precio unitario: {Precio}";
         }
 
     }
