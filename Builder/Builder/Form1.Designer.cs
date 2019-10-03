@@ -42,6 +42,9 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.labelPagar = new System.Windows.Forms.Label();
+            this.checkBoxDelete = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
@@ -68,7 +71,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label2.Location = new System.Drawing.Point(13, 320);
+            this.label2.Location = new System.Drawing.Point(12, 291);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(253, 20);
             this.label2.TabIndex = 1;
@@ -92,6 +95,7 @@
             this.button1.TabIndex = 3;
             this.button1.Text = "Pagar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox1
             // 
@@ -100,6 +104,7 @@
             this.pictureBox1.Size = new System.Drawing.Size(100, 90);
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox2
             // 
@@ -108,6 +113,7 @@
             this.pictureBox2.Size = new System.Drawing.Size(100, 90);
             this.pictureBox2.TabIndex = 14;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pictureBox11
             // 
@@ -116,6 +122,7 @@
             this.pictureBox11.Size = new System.Drawing.Size(100, 90);
             this.pictureBox11.TabIndex = 15;
             this.pictureBox11.TabStop = false;
+            this.pictureBox11.Click += new System.EventHandler(this.pictureBox11_Click);
             // 
             // pictureBox3
             // 
@@ -124,6 +131,8 @@
             this.pictureBox3.Size = new System.Drawing.Size(100, 90);
             this.pictureBox3.TabIndex = 16;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Visible = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // pictureBox12
             // 
@@ -132,6 +141,7 @@
             this.pictureBox12.Size = new System.Drawing.Size(100, 90);
             this.pictureBox12.TabIndex = 17;
             this.pictureBox12.TabStop = false;
+            this.pictureBox12.Click += new System.EventHandler(this.pictureBox12_Click);
             // 
             // pictureBox4
             // 
@@ -140,6 +150,7 @@
             this.pictureBox4.Size = new System.Drawing.Size(100, 90);
             this.pictureBox4.TabIndex = 22;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // pictureBox5
             // 
@@ -148,6 +159,8 @@
             this.pictureBox5.Size = new System.Drawing.Size(100, 90);
             this.pictureBox5.TabIndex = 21;
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.Visible = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
             // pictureBox6
             // 
@@ -156,6 +169,7 @@
             this.pictureBox6.Size = new System.Drawing.Size(100, 90);
             this.pictureBox6.TabIndex = 20;
             this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
             // pictureBox7
             // 
@@ -164,6 +178,7 @@
             this.pictureBox7.Size = new System.Drawing.Size(100, 90);
             this.pictureBox7.TabIndex = 19;
             this.pictureBox7.TabStop = false;
+            this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click);
             // 
             // pictureBox8
             // 
@@ -172,12 +187,44 @@
             this.pictureBox8.Size = new System.Drawing.Size(100, 90);
             this.pictureBox8.TabIndex = 18;
             this.pictureBox8.TabStop = false;
+            this.pictureBox8.Click += new System.EventHandler(this.pictureBox8_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Enabled = false;
+            this.textBox1.Location = new System.Drawing.Point(16, 314);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(582, 124);
+            this.textBox1.TabIndex = 23;
+            // 
+            // labelPagar
+            // 
+            this.labelPagar.AutoSize = true;
+            this.labelPagar.Location = new System.Drawing.Point(719, 335);
+            this.labelPagar.Name = "labelPagar";
+            this.labelPagar.Size = new System.Drawing.Size(22, 13);
+            this.labelPagar.TabIndex = 24;
+            this.labelPagar.Text = "0.0";
+            // 
+            // checkBoxDelete
+            // 
+            this.checkBoxDelete.AutoSize = true;
+            this.checkBoxDelete.Location = new System.Drawing.Point(654, 371);
+            this.checkBoxDelete.Name = "checkBoxDelete";
+            this.checkBoxDelete.Size = new System.Drawing.Size(134, 17);
+            this.checkBoxDelete.TabIndex = 25;
+            this.checkBoxDelete.Text = "Eliminar hamburguesas";
+            this.checkBoxDelete.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.checkBoxDelete);
+            this.Controls.Add(this.labelPagar);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox6);
@@ -225,6 +272,9 @@
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label labelPagar;
+        private System.Windows.Forms.CheckBox checkBoxDelete;
     }
 }
 

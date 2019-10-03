@@ -16,6 +16,7 @@ namespace Builder.Builder
                 Pan = pan,
                 Carne = carne,
                 Nombre = "Mango Habanero",
+                Precio = 98.5,
                 Relleno = new List<string>()
             };
         }

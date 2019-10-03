@@ -16,6 +16,7 @@ namespace Builder.Builder
                 Pan = pan,
                 Carne = carne,
                 Nombre = "Bacon Burguer",
+                Precio = 57.6,
                 Relleno = new List<string>()
             };
         }

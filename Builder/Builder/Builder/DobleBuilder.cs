@@ -16,6 +16,7 @@ namespace Builder.Builder
                 Pan = pan,
                 Carne = carne,
                 Nombre = "Doble con queso",
+                Precio = 90.0,
                 Relleno = new List<string>()
             };
         }

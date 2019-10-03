@@ -12,6 +12,7 @@ namespace Builder.Models
         public CarneEnum Carne { get; set; }
         public List<string> Relleno { get; set; }
         public string Nombre { get; set; }
+        public double Precio { get; set; }
 
         public Hamburguesa()
         {
@@ -21,6 +22,11 @@ namespace Builder.Models
         public Hamburguesa(PanEnum pan, CarneEnum carne, List<string> relleno)
         {
 
+        }
+
+        public override string ToString()
+        {
+            return $"Pizza {Nombre} / Pan: {Pan}, Carne: {Carne}, Relleno: {string.Join("+", Relleno)}";
         }
 
     }

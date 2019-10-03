@@ -16,6 +16,7 @@ namespace Builder.Builder
                 Pan = pan,
                 Carne = carne,
                 Nombre = "Long Rodeo",
+                Precio = 110.2,
                 Relleno = new List<string>()
             };
         }

@@ -16,6 +16,7 @@ namespace Builder.Builder
                 Pan = pan,
                 Carne = carne,
                 Nombre = "Long Jalapeño",
+                Precio = 110.2,
                 Relleno = new List<string>()
             };
         }

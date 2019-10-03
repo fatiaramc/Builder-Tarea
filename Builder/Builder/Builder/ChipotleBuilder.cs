@@ -16,6 +16,7 @@ namespace Builder.Builder
                 Pan = pan,
                 Carne = carne,
                 Nombre = "Chipotle burguer",
+                Precio = 78.2,
                 Relleno = new List<string>()
             };
         }

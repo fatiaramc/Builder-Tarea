@@ -16,6 +16,7 @@ namespace Builder.Builder
                 Pan = pan,
                 Carne = carne,
                 Nombre = "X-treme",
+                Precio = 63.9,
                 Relleno = new List<string>()
             };
         }

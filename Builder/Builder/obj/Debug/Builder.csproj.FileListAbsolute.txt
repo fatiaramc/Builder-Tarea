@@ -8,3 +8,13 @@ C:\Users\Berny\Desktop\Fati\universidad\7mo\Patrones de diseño\Tareas\Builder\B
 C:\Users\Berny\Desktop\Fati\universidad\7mo\Patrones de diseño\Tareas\Builder\Builder\obj\Debug\Builder.csproj.CoreCompileInputs.cache
 C:\Users\Berny\Desktop\Fati\universidad\7mo\Patrones de diseño\Tareas\Builder\Builder\obj\Debug\Builder.exe
 C:\Users\Berny\Desktop\Fati\universidad\7mo\Patrones de diseño\Tareas\Builder\Builder\obj\Debug\Builder.pdb
+C:\Users\Berny\Desktop\Fati\universidad\7mo\Patrones de diseño\Tareas\Builder-Tarea\Builder\Builder\bin\Debug\Builder.exe.config
+C:\Users\Berny\Desktop\Fati\universidad\7mo\Patrones de diseño\Tareas\Builder-Tarea\Builder\Builder\bin\Debug\Builder.exe
+C:\Users\Berny\Desktop\Fati\universidad\7mo\Patrones de diseño\Tareas\Builder-Tarea\Builder\Builder\bin\Debug\Builder.pdb
+C:\Users\Berny\Desktop\Fati\universidad\7mo\Patrones de diseño\Tareas\Builder-Tarea\Builder\Builder\obj\Debug\Builder.csprojAssemblyReference.cache
+C:\Users\Berny\Desktop\Fati\universidad\7mo\Patrones de diseño\Tareas\Builder-Tarea\Builder\Builder\obj\Debug\Builder.Form1.resources
+C:\Users\Berny\Desktop\Fati\universidad\7mo\Patrones de diseño\Tareas\Builder-Tarea\Builder\Builder\obj\Debug\Builder.Properties.Resources.resources
+C:\Users\Berny\Desktop\Fati\universidad\7mo\Patrones de diseño\Tareas\Builder-Tarea\Builder\Builder\obj\Debug\Builder.csproj.GenerateResource.cache
+C:\Users\Berny\Desktop\Fati\universidad\7mo\Patrones de diseño\Tareas\Builder-Tarea\Builder\Builder\obj\Debug\Builder.csproj.CoreCompileInputs.cache
+C:\Users\Berny\Desktop\Fati\universidad\7mo\Patrones de diseño\Tareas\Builder-Tarea\Builder\Builder\obj\Debug\Builder.exe
+C:\Users\Berny\Desktop\Fati\universidad\7mo\Patrones de diseño\Tareas\Builder-Tarea\Builder\Builder\obj\Debug\Builder.pdb

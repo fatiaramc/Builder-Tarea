@@ -16,6 +16,7 @@ namespace Builder.Builder
                 Pan = pan,
                 Carne = carne,
                 Nombre = "Rodeo Burguer",
+                Precio = 50.4,
                 Relleno = new List<string>()
             };
         }
