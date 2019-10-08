@@ -7,16 +7,16 @@ using System.Threading.Tasks;
 
 namespace Builder.Builder
 {
-    class longBuilder:Platillo
+    class SalchichaBuilder:Platillo
     {
         public override IComida PrepararComida()
         {
-            _comida = new Hamburguesa
+            _comida = new Sandwich
             {
                 Pan = PanEnum.Integral,
-                Carne = CarneEnum.Pollo,
-                Nombre = "Long Rodeo",
-                Precio = 110.2,
+                Carne = CarneEnum.Jamón,
+                Nombre = "Salchicha",
+                Precio = 86.6,
                 Relleno = new List<string>()
             };
             PasoPrepararRelleno();
@@ -24,9 +24,10 @@ namespace Builder.Builder
         }
         private void PasoPrepararRelleno()
         {
-            _comida.Relleno.Add("salsa bbq");
-            _comida.Relleno.Add("aros de cebolla");
-            _comida.Relleno.Add("queso americano");
+            _comida.Relleno.Add("salchicha");
+            _comida.Relleno.Add("pepino");
+            _comida.Relleno.Add("pimiento");
+            _comida.Relleno.Add("espinaca");
         }
     }
 }

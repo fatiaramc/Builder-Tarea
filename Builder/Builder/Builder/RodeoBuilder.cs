@@ -7,23 +7,25 @@ using System.Threading.Tasks;
 
 namespace Builder.Builder
 {
-    class RodeoBuilder:HamburguesaBuilder
+    class RodeoBuilder:Platillo
     {
-        public RodeoBuilder(PanEnum pan, CarneEnum carne)
+        public override IComida PrepararComida()
         {
-            _hamburguesa = new Hamburguesa
+            _comida = new Hamburguesa
             {
-                Pan = pan,
-                Carne = carne,
+                Pan = PanEnum.Blanco,
+                Carne = CarneEnum.Doble,
                 Nombre = "Rodeo Burguer",
                 Precio = 50.4,
                 Relleno = new List<string>()
             };
+            PasoPrepararRelleno();
+            return _comida;
         }
-        public override void PasoPrepararRelleno()
+        private void PasoPrepararRelleno()
         {
-            _hamburguesa.Relleno.Add("salsa bbq ahumado");
-            _hamburguesa.Relleno.Add("aros de cebolla");
+            _comida.Relleno.Add("salsa bbq ahumado");
+            _comida.Relleno.Add("aros de cebolla");
         }
     }
 }

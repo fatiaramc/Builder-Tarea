@@ -7,27 +7,29 @@ using System.Threading.Tasks;
 
 namespace Builder.Builder
 {
-    class XtremeBuilder:HamburguesaBuilder
+    class XtremeBuilder:Platillo
     {
-        public XtremeBuilder(PanEnum pan, CarneEnum carne)
+        public override IComida PrepararComida()
         {
-            _hamburguesa = new Hamburguesa
+            _comida = new Hamburguesa
             {
-                Pan = pan,
-                Carne = carne,
+                Pan = PanEnum.Bimbollo,
+                Carne = CarneEnum.Doble,
                 Nombre = "X-treme",
                 Precio = 63.9,
                 Relleno = new List<string>()
             };
+            PasoPrepararRelleno();
+            return _comida;
         }
-        public override void PasoPrepararRelleno()
+        private void PasoPrepararRelleno()
         {
-            _hamburguesa.Relleno.Add("tomate");
-            _hamburguesa.Relleno.Add("mayonesa");
-            _hamburguesa.Relleno.Add("pepinillos");
-            _hamburguesa.Relleno.Add("cebolla");
-            _hamburguesa.Relleno.Add("queso amarillo");
-            _hamburguesa.Relleno.Add("queso americano");
+            _comida.Relleno.Add("tomate");
+            _comida.Relleno.Add("mayonesa");
+            _comida.Relleno.Add("pepinillos");
+            _comida.Relleno.Add("cebolla");
+            _comida.Relleno.Add("queso amarillo");
+            _comida.Relleno.Add("queso americano");
         }
     }
 }

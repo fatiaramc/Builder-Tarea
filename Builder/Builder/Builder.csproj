@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Builder\AlbondigasBuilder.cs" />
     <Compile Include="Builder\AngryBuilder.cs" />
+    <Compile Include="Builder\AtunBuilder.cs" />
     <Compile Include="Builder\BaconBuilder.cs" />
     <Compile Include="Builder\BbqBuilder.cs" />
     <Compile Include="Builder\BigBuilder.cs" />
@@ -55,9 +56,17 @@
     <Compile Include="Builder\DobleBuilder.cs" />
     <Compile Include="Builder\HabaneroBuilder.cs" />
     <Compile Include="Builder\HamburguesaBuilder.cs" />
+    <Compile Include="Builder\HuevoBuilder.cs" />
+    <Compile Include="Builder\ItalianoBuilder.cs" />
+    <Compile Include="Builder\JamonBuilder.cs" />
     <Compile Include="Builder\longBuilder.cs" />
     <Compile Include="Builder\LongJalapeñoBuilder.cs" />
+    <Compile Include="Builder\MantequillaBuilder.cs" />
     <Compile Include="Builder\RodeoBuilder.cs" />
+    <Compile Include="Builder\SalchichaBuilder.cs" />
+    <Compile Include="Builder\TeriyakiBuilder.cs" />
+    <Compile Include="Builder\VegetarianoBuilder.cs" />
+    <Compile Include="Builder\VerdeBuilder.cs" />
     <Compile Include="Builder\XtremeBuilder.cs" />
     <Compile Include="Director\Cocina.cs" />
     <Compile Include="Form1.cs">

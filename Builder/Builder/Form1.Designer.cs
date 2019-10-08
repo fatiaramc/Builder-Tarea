@@ -46,6 +46,15 @@
             this.labelPagar = new System.Windows.Forms.Label();
             this.checkBoxDelete = new System.Windows.Forms.CheckBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.pictureBox13 = new System.Windows.Forms.PictureBox();
+            this.pictureBox14 = new System.Windows.Forms.PictureBox();
+            this.pictureBox15 = new System.Windows.Forms.PictureBox();
+            this.pictureBox16 = new System.Windows.Forms.PictureBox();
+            this.pictureBox17 = new System.Windows.Forms.PictureBox();
+            this.pictureBox18 = new System.Windows.Forms.PictureBox();
+            this.pictureBox19 = new System.Windows.Forms.PictureBox();
+            this.pictureBox20 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
@@ -57,6 +66,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -65,25 +83,25 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label1.Location = new System.Drawing.Point(13, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(220, 20);
+            this.label1.Size = new System.Drawing.Size(153, 20);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Selecciona una hamburguesa";
+            this.label1.Text = "Selecciona tu platillo";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label2.Location = new System.Drawing.Point(8, 457);
+            this.label2.Location = new System.Drawing.Point(8, 576);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(253, 20);
+            this.label2.Size = new System.Drawing.Size(196, 20);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Lista de Hamburguesas a comprar";
+            this.label2.Text = "Lista de platillos a comprar";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label3.Location = new System.Drawing.Point(647, 495);
+            this.label3.Location = new System.Drawing.Point(647, 614);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(61, 20);
             this.label3.TabIndex = 2;
@@ -91,7 +109,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(650, 560);
+            this.button1.Location = new System.Drawing.Point(650, 679);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(134, 44);
             this.button1.TabIndex = 3;
@@ -193,7 +211,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 480);
+            this.textBox1.Location = new System.Drawing.Point(12, 599);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
@@ -204,7 +222,7 @@
             // labelPagar
             // 
             this.labelPagar.AutoSize = true;
-            this.labelPagar.Location = new System.Drawing.Point(715, 501);
+            this.labelPagar.Location = new System.Drawing.Point(715, 620);
             this.labelPagar.Name = "labelPagar";
             this.labelPagar.Size = new System.Drawing.Size(22, 13);
             this.labelPagar.TabIndex = 24;
@@ -213,7 +231,7 @@
             // checkBoxDelete
             // 
             this.checkBoxDelete.AutoSize = true;
-            this.checkBoxDelete.Location = new System.Drawing.Point(650, 537);
+            this.checkBoxDelete.Location = new System.Drawing.Point(650, 656);
             this.checkBoxDelete.Name = "checkBoxDelete";
             this.checkBoxDelete.Size = new System.Drawing.Size(134, 17);
             this.checkBoxDelete.TabIndex = 25;
@@ -229,11 +247,102 @@
             this.pictureBox9.TabStop = false;
             this.pictureBox9.Click += new System.EventHandler(this.pictureBox9_Click);
             // 
+            // pictureBox10
+            // 
+            this.pictureBox10.Location = new System.Drawing.Point(177, 299);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(100, 90);
+            this.pictureBox10.TabIndex = 27;
+            this.pictureBox10.TabStop = false;
+            this.pictureBox10.Click += new System.EventHandler(this.pictureBox10_Click);
+            // 
+            // pictureBox13
+            // 
+            this.pictureBox13.Location = new System.Drawing.Point(336, 299);
+            this.pictureBox13.Name = "pictureBox13";
+            this.pictureBox13.Size = new System.Drawing.Size(100, 90);
+            this.pictureBox13.TabIndex = 28;
+            this.pictureBox13.TabStop = false;
+            this.pictureBox13.Click += new System.EventHandler(this.pictureBox13_Click);
+            // 
+            // pictureBox14
+            // 
+            this.pictureBox14.Location = new System.Drawing.Point(498, 299);
+            this.pictureBox14.Name = "pictureBox14";
+            this.pictureBox14.Size = new System.Drawing.Size(100, 90);
+            this.pictureBox14.TabIndex = 29;
+            this.pictureBox14.TabStop = false;
+            this.pictureBox14.Click += new System.EventHandler(this.pictureBox14_Click);
+            // 
+            // pictureBox15
+            // 
+            this.pictureBox15.Location = new System.Drawing.Point(655, 299);
+            this.pictureBox15.Name = "pictureBox15";
+            this.pictureBox15.Size = new System.Drawing.Size(100, 90);
+            this.pictureBox15.TabIndex = 30;
+            this.pictureBox15.TabStop = false;
+            this.pictureBox15.Click += new System.EventHandler(this.pictureBox15_Click);
+            // 
+            // pictureBox16
+            // 
+            this.pictureBox16.Location = new System.Drawing.Point(17, 416);
+            this.pictureBox16.Name = "pictureBox16";
+            this.pictureBox16.Size = new System.Drawing.Size(100, 90);
+            this.pictureBox16.TabIndex = 31;
+            this.pictureBox16.TabStop = false;
+            this.pictureBox16.Click += new System.EventHandler(this.pictureBox16_Click);
+            // 
+            // pictureBox17
+            // 
+            this.pictureBox17.Location = new System.Drawing.Point(177, 416);
+            this.pictureBox17.Name = "pictureBox17";
+            this.pictureBox17.Size = new System.Drawing.Size(100, 90);
+            this.pictureBox17.TabIndex = 32;
+            this.pictureBox17.TabStop = false;
+            this.pictureBox17.Click += new System.EventHandler(this.pictureBox17_Click);
+            // 
+            // pictureBox18
+            // 
+            this.pictureBox18.Location = new System.Drawing.Point(336, 416);
+            this.pictureBox18.Name = "pictureBox18";
+            this.pictureBox18.Size = new System.Drawing.Size(100, 90);
+            this.pictureBox18.TabIndex = 33;
+            this.pictureBox18.TabStop = false;
+            this.pictureBox18.Click += new System.EventHandler(this.pictureBox18_Click);
+            // 
+            // pictureBox19
+            // 
+            this.pictureBox19.Location = new System.Drawing.Point(498, 416);
+            this.pictureBox19.Name = "pictureBox19";
+            this.pictureBox19.Size = new System.Drawing.Size(100, 90);
+            this.pictureBox19.TabIndex = 34;
+            this.pictureBox19.TabStop = false;
+            this.pictureBox19.Click += new System.EventHandler(this.pictureBox19_Click);
+            // 
+            // pictureBox20
+            // 
+            this.pictureBox20.Location = new System.Drawing.Point(655, 416);
+            this.pictureBox20.Name = "pictureBox20";
+            this.pictureBox20.Size = new System.Drawing.Size(100, 90);
+            this.pictureBox20.TabIndex = 35;
+            this.pictureBox20.TabStop = false;
+            this.pictureBox20.Click += new System.EventHandler(this.pictureBox20_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 616);
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.ClientSize = new System.Drawing.Size(800, 735);
+            this.Controls.Add(this.pictureBox20);
+            this.Controls.Add(this.pictureBox19);
+            this.Controls.Add(this.pictureBox18);
+            this.Controls.Add(this.pictureBox17);
+            this.Controls.Add(this.pictureBox16);
+            this.Controls.Add(this.pictureBox15);
+            this.Controls.Add(this.pictureBox14);
+            this.Controls.Add(this.pictureBox13);
+            this.Controls.Add(this.pictureBox10);
             this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.checkBoxDelete);
             this.Controls.Add(this.labelPagar);
@@ -265,6 +374,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -290,6 +408,15 @@
         private System.Windows.Forms.Label labelPagar;
         private System.Windows.Forms.CheckBox checkBoxDelete;
         private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.PictureBox pictureBox10;
+        private System.Windows.Forms.PictureBox pictureBox13;
+        private System.Windows.Forms.PictureBox pictureBox14;
+        private System.Windows.Forms.PictureBox pictureBox15;
+        private System.Windows.Forms.PictureBox pictureBox16;
+        private System.Windows.Forms.PictureBox pictureBox17;
+        private System.Windows.Forms.PictureBox pictureBox18;
+        private System.Windows.Forms.PictureBox pictureBox19;
+        private System.Windows.Forms.PictureBox pictureBox20;
     }
 }
 

@@ -7,26 +7,27 @@ using System.Threading.Tasks;
 
 namespace Builder.Builder
 {
-    class BigBuilder:Platillo
+    class VerdeBuilder : Platillo
     {
         public override IComida PrepararComida()
         {
-            _comida = new Hamburguesa
+            _comida = new Sandwich
             {
-                Pan = PanEnum.Bimbollo,
-                Carne = CarneEnum.Pollo,
-                Nombre = "Big King",
-                Precio = 68.5,
+                Pan = PanEnum.Integral,
+                Carne = CarneEnum.SinCarne,
+                Nombre = "Verde",
+                Precio = 56.6,
                 Relleno = new List<string>()
             };
+            PasoPrepararRelleno();
             return _comida;
         }
         private void PasoPrepararRelleno()
         {
-            _comida.Relleno.Add("salsa agridulce");
-            _comida.Relleno.Add("pepinillos");
-            _comida.Relleno.Add("queso amarillo");
             _comida.Relleno.Add("lechuga");
+            _comida.Relleno.Add("pepino");
+            _comida.Relleno.Add("pimiento");
+            _comida.Relleno.Add("espinaca");
         }
     }
 }

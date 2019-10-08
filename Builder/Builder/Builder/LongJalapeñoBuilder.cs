@@ -7,25 +7,27 @@ using System.Threading.Tasks;
 
 namespace Builder.Builder
 {
-    class LongJalapeñoBuilder:HamburguesaBuilder
+    class LongJalapeñoBuilder:Platillo
     {
-        public LongJalapeñoBuilder(PanEnum pan, CarneEnum carne)
+        public override IComida PrepararComida()
         {
-            _hamburguesa = new Hamburguesa
+            _comida = new Hamburguesa
             {
-                Pan = pan,
-                Carne = carne,
+                Pan = PanEnum.Doble,
+                Carne = CarneEnum.Pollo,
                 Nombre = "Long Jalapeño",
                 Precio = 110.2,
                 Relleno = new List<string>()
             };
+            PasoPrepararRelleno();
+            return _comida;
         }
-        public override void PasoPrepararRelleno()
+        private void PasoPrepararRelleno()
         {
-            _hamburguesa.Relleno.Add("queso americano");
-            _hamburguesa.Relleno.Add("aros de cebolla");
-            _hamburguesa.Relleno.Add("lechuga");
-            _hamburguesa.Relleno.Add("jalapeño");
+            _comida.Relleno.Add("queso americano");
+            _comida.Relleno.Add("aros de cebolla");
+            _comida.Relleno.Add("lechuga");
+            _comida.Relleno.Add("jalapeño");
         }
     }
 }

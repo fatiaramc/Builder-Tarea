@@ -7,16 +7,16 @@ using System.Threading.Tasks;
 
 namespace Builder.Builder
 {
-    class HabaneroBuilder:Platillo
+    class VegetarianoBuilder :  Platillo
     {
         public override IComida PrepararComida()
         {
-            _comida = new Hamburguesa
+            _comida = new Baguette
             {
-                Pan = PanEnum.Integral,
-                Carne = CarneEnum.Res,
-                Nombre = "Mango Habanero",
-                Precio = 98.5,
+                Pan = PanEnum.Ajonjoli,
+                Carne = CarneEnum.SinCarne,
+                Nombre = "Vegetariano",
+                Precio = 42.0,
                 Relleno = new List<string>()
             };
             PasoPrepararRelleno();
@@ -24,10 +24,12 @@ namespace Builder.Builder
         }
         private void PasoPrepararRelleno()
         {
-            _comida.Relleno.Add("salsa Mango Habanero");
-            _comida.Relleno.Add("cebollitas");
+            _comida.Relleno.Add("vinagreta");
+            _comida.Relleno.Add("jitomate");
             _comida.Relleno.Add("lechuga");
-            _comida.Relleno.Add("tocino");
+            _comida.Relleno.Add("pimiento");
+            _comida.Relleno.Add("pepino");
+            _comida.Relleno.Add("cebolla");
         }
     }
 }

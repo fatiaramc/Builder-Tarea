@@ -8,6 +8,6 @@ namespace Builder.Models
 {
     public enum CarneEnum
     {
-        Res, Pollo, Doble,
+        Res, Pollo, Doble, Atún, Jamón, SinCarne
     }
 }

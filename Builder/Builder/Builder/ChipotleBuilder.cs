@@ -7,25 +7,27 @@ using System.Threading.Tasks;
 
 namespace Builder.Builder
 {
-    class ChipotleBuilder : HamburguesaBuilder
+    class ChipotleBuilder : Platillo
     {
-        public ChipotleBuilder(PanEnum pan, CarneEnum carne)
+        public override IComida PrepararComida()
         {
-            _hamburguesa = new Hamburguesa
+            _comida = new Hamburguesa
             {
-                Pan = pan,
-                Carne = carne,
+                Pan = PanEnum.Bimbollo,
+                Carne = CarneEnum.Pollo,
                 Nombre = "Chipotle burguer",
                 Precio = 78.2,
                 Relleno = new List<string>()
             };
+            PasoPrepararRelleno();
+            return _comida;
         }
-        public override void PasoPrepararRelleno()
+        private void PasoPrepararRelleno()
         {
-            _hamburguesa.Relleno.Add("salsa chipotle");
-            _hamburguesa.Relleno.Add("aros de cebolla");
-            _hamburguesa.Relleno.Add("lechuga");
-            _hamburguesa.Relleno.Add("tocino");
+            _comida.Relleno.Add("salsa chipotle");
+            _comida.Relleno.Add("aros de cebolla");
+            _comida.Relleno.Add("lechuga");
+            _comida.Relleno.Add("tocino");
         }
     }
 }

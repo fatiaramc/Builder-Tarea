@@ -11,7 +11,7 @@ namespace Builder.Builder
     {
         public override IComida PrepararComida()
         {
-            _comida = new Sandwich
+            _comida = new Baguette
             {
                 Pan = PanEnum.Ajonjoli,
                 Carne = CarneEnum.Res,

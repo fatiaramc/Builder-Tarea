@@ -7,25 +7,27 @@ using System.Threading.Tasks;
 
 namespace Builder.Builder
 {
-    class BaconBuilder:HamburguesaBuilder
+    class BaconBuilder:Platillo
     {
-        public BaconBuilder(PanEnum pan, CarneEnum carne)
+        public override IComida PrepararComida()
         {
-            _hamburguesa = new Hamburguesa
+            _comida = new Hamburguesa
             {
-                Pan = pan,
-                Carne = carne,
+                Pan = PanEnum.Blanco,
+                Carne = CarneEnum.Res,
                 Nombre = "Bacon Burguer",
                 Precio = 57.6,
                 Relleno = new List<string>()
             };
+            PasoPrepararRelleno();
+            return _comida;
         }
-        public override void PasoPrepararRelleno()
+        private void PasoPrepararRelleno()
         {
-            _hamburguesa.Relleno.Add("tocino");
-            _hamburguesa.Relleno.Add("salsa catsup");
-            _hamburguesa.Relleno.Add("mayonesa");
-            _hamburguesa.Relleno.Add("queso americano");
+            _comida.Relleno.Add("tocino");
+            _comida.Relleno.Add("salsa catsup");
+            _comida.Relleno.Add("mayonesa");
+            _comida.Relleno.Add("queso americano");
             
         }
     }

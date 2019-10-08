@@ -15,9 +15,7 @@ namespace Builder
 {
     public partial class Form1 : Form
     {
-        public Dictionary<string, int> _listHamburguesas = new Dictionary<string, int>();
         public Dictionary<string, int> _listPlatillos = new Dictionary<string, int>();
-        Cocina cocina = new Cocina();
         double total = 0;
         public Form1()
         {
@@ -61,31 +59,41 @@ namespace Builder
             pictureBox12.ImageLocation = "http://bk-latam-prod.s3.amazonaws.com/sites/burgerking.com.mx/files/WHOPPER-DOBLE-300x270-PARRILLA_0.png";
             pictureBox12.SizeMode = PictureBoxSizeMode.StretchImage;
 
-            //sandwiches
+            //Baguette
             //albondigas
             pictureBox9.ImageLocation = "https://www.subway.com/ns/images/menu/MEX/SPA/RPLC-all-sandwiches-meatball-594x334_PR.jpg";
             pictureBox9.SizeMode = PictureBoxSizeMode.StretchImage;
-        }
+            //italiano
+            pictureBox10.ImageLocation = "https://www.subway.com/ns/images/menu/MEX/SPA/RPLC-all-sandwiches-italian-bmt-MX-594x334_PR.jpg";
+            pictureBox10.SizeMode = PictureBoxSizeMode.StretchImage;
+            //atun
+            pictureBox13.ImageLocation = "https://www.subway.com/ns/images/menu/MEX/SPA/RPLC-all-sandwiches-tuna-MX-594x334_PR.jpg";
+            pictureBox13.SizeMode = PictureBoxSizeMode.StretchImage;
+            //vegetariano
+            pictureBox14.ImageLocation = "https://www.subway.com/ns/images/menu/MEX/SPA/RPLC-all-sandwiches-veggie-delite-MX-594x334_PR.jpg";
+            pictureBox14.SizeMode = PictureBoxSizeMode.StretchImage;
+            //teriyaki
+            pictureBox15.ImageLocation = "https://www.subway.com/ns/images/menu/MEX/SPA/RPLC-all-sandwiches-soct-MX-594x334_PR.jpg";
+            pictureBox15.SizeMode = PictureBoxSizeMode.StretchImage;
 
-        private void chargeHamburguer(Hamburguesa hamburguesa)
-        {
-            try
-            {
-                if (!_listHamburguesas.ContainsKey(hamburguesa.ToString()))
-                    _listHamburguesas.Add(hamburguesa.ToString(), 0);
-                _listHamburguesas[hamburguesa.ToString()] += 1;
-                total += hamburguesa.Precio;
-                var k = "";
-                foreach (var h in _listHamburguesas)
-                {
-                    k += h.Value + " " + h.Key + Environment.NewLine;
-                }
-                textBox1.Text = k;
-                labelPagar.Text = "" + total;
-                MessageBox.Show("Se ha agregado una " + hamburguesa.Nombre + " a tu pedido");
-            }
-            catch { }
-            
+
+            //Sandwiches
+            //verde
+            pictureBox16.ImageLocation = "http://comemesandwicheria.cl/wp-content/uploads/2017/03/pechuga-frita2-1.png";
+            pictureBox16.SizeMode = PictureBoxSizeMode.StretchImage;
+            //jamon
+            pictureBox17.ImageLocation = "https://elhornopanaderia.com.ec/wp-content/uploads/2017/11/sandwich.png";
+            pictureBox17.SizeMode = PictureBoxSizeMode.StretchImage;
+            //mantequilla de many y jalea
+            pictureBox18.ImageLocation = "https://missouriwrestlingrevival.files.wordpress.com/2009/08/898-peanut-butter-jelly.png";
+            pictureBox18.SizeMode = PictureBoxSizeMode.StretchImage;
+            //huevo
+            pictureBox19.ImageLocation = "https://www.wendys.cl/wp-content/uploads/2017/08/643x378-huevo-jamon-1.png";
+            pictureBox19.SizeMode = PictureBoxSizeMode.StretchImage;
+            //salchicha
+            pictureBox20.ImageLocation = "https://www.wienerschnitzel.com/wp-content/uploads/2014/10/sandwich_polish-sandwich.png";
+            pictureBox20.SizeMode = PictureBoxSizeMode.StretchImage;
+
         }
 
         private void cargarPlatillo(IComida comida)
@@ -113,120 +121,108 @@ namespace Builder
 
         }
 
-        private void deleteHamburguer(Hamburguesa hamburguesa)
+        private void deletePlatillo(IComida p)
         {
             try
             {
-                if (!_listHamburguesas.ContainsKey(hamburguesa.ToString()))
+                string p_string = p.ToString();
+                if (!_listPlatillos.ContainsKey(p_string))
                 {
-                    MessageBox.Show("No puedes eliminar hamburguesas que no has pedido");
+                    MessageBox.Show("No puedes eliminar platillos que no has pedido");
                 }
-                else if (_listHamburguesas[hamburguesa.ToString()] == 0)
+                else if (_listPlatillos[p_string] == 0)
                 {
-                    MessageBox.Show("No puedes eliminar hamburguesas que no has pedido");
+                    MessageBox.Show("No puedes eliminar platillos que no has pedido");
                 }
                 else
                 {
-                    _listHamburguesas[hamburguesa.ToString()]--;
-                    total -= hamburguesa.Precio;
-                    
-                    var h_int = _listHamburguesas[hamburguesa.ToString()];
+                    _listPlatillos[p_string]--;
+                    total -= p.Precio;
+
+                    var h_int = _listPlatillos[p_string];
                     if (h_int <= 0)
-                        _listHamburguesas.Remove(hamburguesa.ToString());
+                        _listPlatillos.Remove(p_string);
                     var k = "";
-                    foreach (var h in _listHamburguesas)
+                    foreach (var h in _listPlatillos)
                     {
                         k += h.Value + " " + h.Key + Environment.NewLine;
                     }
                     textBox1.Text = k;
 
                     labelPagar.Text = "" + total;
-                    MessageBox.Show("La hamburguesa ha sido eliminada del pedido");
+                    MessageBox.Show("El platillo ha sido eliminada del pedido");
                 }
             }
-            catch(Exception e) {
+            catch (Exception e)
+            {
                 //MessageBox.Show("Error, reinicie su operacion por favor");
                 MessageBox.Show("Error " + e);
             }
         }
 
-        private void ClickHamburguer(Hamburguesa h)
-        {
-            if (!checkBoxDelete.Checked)
-                chargeHamburguer(h);
-            else
-                deleteHamburguer(h);
-        }
-
         private void clickPlatillo(Platillo p)
         {
-            //if (!checkBoxDelete.Checked)
             var comida = p.PrepararComida();
-            cargarPlatillo(comida);
-
-            //else
-              //  deleteHamburguer(h);
+            if (!checkBoxDelete.Checked)
+            {
+                cargarPlatillo(comida);
+            }
+            else
+              deletePlatillo(comida);
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            /*Hamburguesa h = cocina.CocinarHamburguesa(new BbqBuilder(PanEnum.Ajonjoli, CarneEnum.Res));
-            ClickHamburguer(h);*/
-
-            //Platillo h = cocina.CocinarHamburguesa(new BbqBuilder(PanEnum.Ajonjoli, CarneEnum.Res));
             Platillo p = new BbqBuilder();
             clickPlatillo(p);
-            //ClickHamburguer(p);
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            //Hamburguesa h = cocina.CocinarHamburguesa(new AngryBuilder());
             Platillo p = new AngryBuilder();
-            //ClickHamburguer(h);
             clickPlatillo(p);
         }
 
         private void pictureBox11_Click(object sender, EventArgs e)
         {
-            Hamburguesa h = cocina.CocinarHamburguesa(new HabaneroBuilder(PanEnum.Integral, CarneEnum.Res));
-            ClickHamburguer(h);
+            Platillo p = new HabaneroBuilder();
+            clickPlatillo(p);
         }
 
         private void pictureBox12_Click(object sender, EventArgs e)
         {
-            Hamburguesa h = cocina.CocinarHamburguesa(new DobleBuilder(PanEnum.Doble, CarneEnum.Doble));
-            ClickHamburguer(h);
+            Platillo p = new DobleBuilder();
+            clickPlatillo(p);
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            Hamburguesa h = cocina.CocinarHamburguesa(new ChipotleBuilder(PanEnum.Bimbollo, CarneEnum.Pollo));
-            ClickHamburguer(h);
+            Platillo p = new ChipotleBuilder();
+            clickPlatillo(p);
         }
 
         private void pictureBox8_Click(object sender, EventArgs e)
         {
-            Hamburguesa h = cocina.CocinarHamburguesa(new LongJalapeñoBuilder(PanEnum.Doble, CarneEnum.Pollo));
-            ClickHamburguer(h);
+            Platillo p = new LongJalapeñoBuilder();
+            clickPlatillo(p);
         }
 
         private void pictureBox7_Click(object sender, EventArgs e)
         {
-            Hamburguesa h = cocina.CocinarHamburguesa(new RodeoBuilder(PanEnum.Blanco, CarneEnum.Doble));
-            ClickHamburguer(h);
+            Platillo p = new RodeoBuilder();
+            clickPlatillo(p);
         }
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
-            Hamburguesa h = cocina.CocinarHamburguesa(new XtremeBuilder(PanEnum.Bimbollo, CarneEnum.Doble));
-            ClickHamburguer(h);
+            Platillo p = new XtremeBuilder();
+            clickPlatillo(p);
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            Hamburguesa h = cocina.CocinarHamburguesa(new BaconBuilder(PanEnum.Blanco, CarneEnum.Res));
-            ClickHamburguer(h);
+            Platillo p = new BaconBuilder();
+            clickPlatillo(p);
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
@@ -238,7 +234,7 @@ namespace Builder
         private void button1_Click(object sender, EventArgs e)
         {
             textBox1.Text = "";
-            _listHamburguesas = new Dictionary<string, int>();
+            _listPlatillos = new Dictionary<string, int>();
             total = 0;
             labelPagar.Text = "0";
             MessageBox.Show("Gracias, vuelve pronto");
@@ -248,6 +244,60 @@ namespace Builder
         {
             //sandwich albondigas
             Platillo p = new AlbondigasBuilder();
+            clickPlatillo(p);
+        }
+
+        private void pictureBox10_Click(object sender, EventArgs e)
+        {
+            Platillo p = new ItalianoBuilder();
+            clickPlatillo(p);
+        }
+
+        private void pictureBox13_Click(object sender, EventArgs e)
+        {
+            Platillo p = new AtunBuilder();
+            clickPlatillo(p);
+        }
+
+        private void pictureBox14_Click(object sender, EventArgs e)
+        {
+            Platillo p = new VegetarianoBuilder();
+            clickPlatillo(p);
+        }
+
+        private void pictureBox15_Click(object sender, EventArgs e)
+        {
+            Platillo p = new TeriyakiBuilder();
+            clickPlatillo(p);
+        }
+
+        private void pictureBox16_Click(object sender, EventArgs e)
+        {
+            Platillo p = new VerdeBuilder();
+            clickPlatillo(p);
+        }
+
+        private void pictureBox17_Click(object sender, EventArgs e)
+        {
+            Platillo p = new JamonBuilder();
+            clickPlatillo(p);
+        }
+
+        private void pictureBox18_Click(object sender, EventArgs e)
+        {
+            Platillo p = new MantequillaBuilder();
+            clickPlatillo(p);
+        }
+
+        private void pictureBox19_Click(object sender, EventArgs e)
+        {
+            Platillo p = new HuevoBuilder();
+            clickPlatillo(p);
+        }
+
+        private void pictureBox20_Click(object sender, EventArgs e)
+        {
+            Platillo p = new SalchichaBuilder();
             clickPlatillo(p);
         }
     }
