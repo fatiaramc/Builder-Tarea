@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Builder\AlbondigasBuilder.cs" />
     <Compile Include="Builder\AngryBuilder.cs" />
     <Compile Include="Builder\BaconBuilder.cs" />
     <Compile Include="Builder\BbqBuilder.cs" />
@@ -65,9 +66,14 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Baguette.cs" />
     <Compile Include="Models\CarneEnum.cs" />
     <Compile Include="Models\Hamburguesa.cs" />
+    <Compile Include="Models\IComida.cs" />
     <Compile Include="Models\PanEnum.cs" />
+    <Compile Include="Models\Platillo.cs" />
+    <Compile Include="Models\PlatilloHamburguesa.cs" />
+    <Compile Include="Models\Sandwich.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">

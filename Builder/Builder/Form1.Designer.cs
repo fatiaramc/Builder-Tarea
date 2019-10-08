@@ -45,6 +45,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.labelPagar = new System.Windows.Forms.Label();
             this.checkBoxDelete = new System.Windows.Forms.CheckBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
@@ -55,6 +56,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -71,7 +73,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label2.Location = new System.Drawing.Point(12, 291);
+            this.label2.Location = new System.Drawing.Point(8, 457);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(253, 20);
             this.label2.TabIndex = 1;
@@ -81,7 +83,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label3.Location = new System.Drawing.Point(651, 329);
+            this.label3.Location = new System.Drawing.Point(647, 495);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(61, 20);
             this.label3.TabIndex = 2;
@@ -89,7 +91,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(654, 394);
+            this.button1.Location = new System.Drawing.Point(650, 560);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(134, 44);
             this.button1.TabIndex = 3;
@@ -191,7 +193,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(16, 314);
+            this.textBox1.Location = new System.Drawing.Point(12, 480);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
@@ -202,7 +204,7 @@
             // labelPagar
             // 
             this.labelPagar.AutoSize = true;
-            this.labelPagar.Location = new System.Drawing.Point(719, 335);
+            this.labelPagar.Location = new System.Drawing.Point(715, 501);
             this.labelPagar.Name = "labelPagar";
             this.labelPagar.Size = new System.Drawing.Size(22, 13);
             this.labelPagar.TabIndex = 24;
@@ -211,18 +213,28 @@
             // checkBoxDelete
             // 
             this.checkBoxDelete.AutoSize = true;
-            this.checkBoxDelete.Location = new System.Drawing.Point(654, 371);
+            this.checkBoxDelete.Location = new System.Drawing.Point(650, 537);
             this.checkBoxDelete.Name = "checkBoxDelete";
             this.checkBoxDelete.Size = new System.Drawing.Size(134, 17);
             this.checkBoxDelete.TabIndex = 25;
             this.checkBoxDelete.Text = "Eliminar hamburguesas";
             this.checkBoxDelete.UseVisualStyleBackColor = true;
             // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Location = new System.Drawing.Point(17, 299);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(100, 90);
+            this.pictureBox9.TabIndex = 26;
+            this.pictureBox9.TabStop = false;
+            this.pictureBox9.Click += new System.EventHandler(this.pictureBox9_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 616);
+            this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.checkBoxDelete);
             this.Controls.Add(this.labelPagar);
             this.Controls.Add(this.textBox1);
@@ -252,6 +264,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -276,6 +289,7 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label labelPagar;
         private System.Windows.Forms.CheckBox checkBoxDelete;
+        private System.Windows.Forms.PictureBox pictureBox9;
     }
 }
 

@@ -7,19 +7,15 @@ using System.Threading.Tasks;
 
 namespace Builder.Builder
 {
-    //class BbqBuilder : HamburguesaBuilder
-    class BbqBuilder : Platillo
+    class AlbondigasBuilder : Platillo
     {
-        //public BbqBuilder(PanEnum pan, CarneEnum carne)
         public override IComida PrepararComida()
         {
-            //_hamburguesa = new Hamburguesa
-            //return new Hamburguesa
-            _comida = new Hamburguesa
+            _comida = new Sandwich
             {
                 Pan = PanEnum.Ajonjoli,
                 Carne = CarneEnum.Res,
-                Nombre = "Bbq",
+                Nombre = "Albondigas",
                 Precio = 56.6,
                 Relleno = new List<string>()
             };
@@ -28,11 +24,9 @@ namespace Builder.Builder
         }
         private void PasoPrepararRelleno()
         {
-            _comida.Relleno.Add("salsa bbq");
+            _comida.Relleno.Add("salsa albondigas");
             _comida.Relleno.Add("mayonesa");
-            _comida.Relleno.Add("pepinillos");
-            _comida.Relleno.Add("queso");
-            _comida.Relleno.Add("tocino");
+            _comida.Relleno.Add("queso");            
         }
     }
 }

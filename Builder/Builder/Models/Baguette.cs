@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Builder.Models
 {
-    public class Hamburguesa : IComida
+    class Baguette : IComida
     {
         public PanEnum Pan { get; set; }
         public CarneEnum Carne { get; set; }
@@ -14,24 +14,23 @@ namespace Builder.Models
         public string Nombre { get; set; }
         public double Precio { get; set; }
 
-        public Hamburguesa()
+        public Baguette()
         {
 
         }
 
-        public Hamburguesa(PanEnum pan, CarneEnum carne, List<string> relleno)
+        public Baguette(PanEnum pan, CarneEnum carne, List<string> relleno)
         {
 
         }
 
         public override string ToString()
         {
-            return $"Hamburguesa {Nombre} " + Environment.NewLine +
+            return $"Baguette {Nombre} " + Environment.NewLine +
                 $"\t Pan: {Pan} " + Environment.NewLine +
                 $"\t Carne: {Carne}" + Environment.NewLine +
                 $"\t Relleno:" + Environment.NewLine + $"\t\t{string.Join(Environment.NewLine + "\t\t", Relleno)}" +
                 Environment.NewLine + $"\t Precio unitario: {Precio}";
         }
-
     }
 }

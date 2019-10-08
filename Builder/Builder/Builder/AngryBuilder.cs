@@ -7,25 +7,27 @@ using System.Threading.Tasks;
 
 namespace Builder.Builder
 {
-    class AngryBuilder : HamburguesaBuilder
+    class AngryBuilder : Platillo
     {
-        public AngryBuilder(PanEnum pan, CarneEnum carne)
+        public override IComida PrepararComida()
         {
-            _hamburguesa = new Hamburguesa
+            _comida = new Hamburguesa
             {
-                Pan = pan,
-                Carne = carne,
+                Pan = PanEnum.Blanco,
+                Carne = CarneEnum.Res,
                 Nombre = "Angry",
                 Precio = 127.3,
                 Relleno = new List<string>()
             };
+            PasoPrepararRelleno();
+            return _comida;
         }
-        public override void PasoPrepararRelleno()
+        private void PasoPrepararRelleno()
         {
-            _hamburguesa.Relleno.Add("tomate");
-            _hamburguesa.Relleno.Add("mayonesa");
-            _hamburguesa.Relleno.Add("cebollitas angry");
-            _hamburguesa.Relleno.Add("tocino");
+            _comida.Relleno.Add("tomate");
+            _comida.Relleno.Add("mayonesa");
+            _comida.Relleno.Add("cebollitas angry");
+            _comida.Relleno.Add("tocino");
         }
     }
 }
